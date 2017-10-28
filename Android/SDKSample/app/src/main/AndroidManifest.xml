@@ -50,11 +50,12 @@
 
         <activity
             android:name=".activity.MiniDroneActivity"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".activity.SwingDroneActivity"
             android:screenOrientation="landscape"/>
+        <activity android:name=".activity.MenuNiveisActivity" />
 
     </application>
 

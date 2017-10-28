@@ -220,6 +220,21 @@ public class MiniDrone {
             mDeviceController.getFeatureMiniDrone().sendPilotingTakeOff();
         }
     }
+    public void desafioUm(){
+        if ((mDeviceController != null) && (mState.equals(ARCONTROLLER_DEVICE_STATE_ENUM.ARCONTROLLER_DEVICE_STATE_RUNNING))) {
+            mDeviceController.getFeatureMiniDrone().sendPilotingTakeOff();
+        }
+        try {
+            Thread.sleep(100);
+            if ((mDeviceController != null) && (mState.equals(ARCONTROLLER_DEVICE_STATE_ENUM.ARCONTROLLER_DEVICE_STATE_RUNNING))) {
+                mDeviceController.getFeatureMiniDrone().sendPilotingTakeOff();
+            }
+
+        }catch(InterruptedException e){
+            e.getMessage();
+        }
+
+    }
 
     public void land() {
         if ((mDeviceController != null) && (mState.equals(ARCONTROLLER_DEVICE_STATE_ENUM.ARCONTROLLER_DEVICE_STATE_RUNNING))) {
@@ -405,6 +420,7 @@ public class MiniDrone {
         }
     }
 
+
     private void notifyDownloadProgressed(String mediaName, int progress) {
         List<Listener> listenersCpy = new ArrayList<>(mListeners);
         for (Listener listener : listenersCpy) {
@@ -554,6 +570,8 @@ public class MiniDrone {
             notifyFrameReceived(frame);
             return ARCONTROLLER_ERROR_ENUM.ARCONTROLLER_OK;
         }
+
+
 
         @Override
         public void onFrameTimeout(ARDeviceController deviceController) {}
