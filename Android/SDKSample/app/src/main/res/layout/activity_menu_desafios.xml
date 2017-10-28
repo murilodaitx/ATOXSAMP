@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MenusNiveisActivity"
+    android:id="@+id/piloting_view">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_menu"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="22dp"
+        android:text="Selecione um Desafio"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnNivel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt_menu"
+        android:layout_alignStart="@+id/txt_menu"
+        android:layout_below="@+id/txt_menu"
+        android:layout_marginTop="48dp"
+        android:text="Nivel 1" />
+
+    <Button
+        android:id="@+id/btnNivel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txt_menu"
+        android:layout_alignRight="@+id/txt_menu"
+        android:layout_alignTop="@+id/btnNivel1"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:text="Nivel 2" />
+
+    <Button
+        android:id="@+id/btnNivel3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnNivel1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:text="Nivel 3" />
+</RelativeLayout>

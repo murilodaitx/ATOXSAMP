@@ -127,6 +127,13 @@ public class MiniDroneActivity extends AppCompatActivity {
             }
         });
 
+       findViewById(R.id.btnDesafio).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                mMiniDrone.desafioUm();
+            }
+        });
+
+
         mDownloadBt = (Button)findViewById(R.id.downloadBt);
         mDownloadBt.setEnabled(false);
         mDownloadBt.setOnClickListener(new View.OnClickListener() {
